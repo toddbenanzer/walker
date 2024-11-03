@@ -1,0 +1,62 @@
+{
+	"name": "Python 3",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"customizations": {
+		"vscode": {
+			"settings": { 
+				"terminal.integrated.profiles.linux": {
+					"zsh (login)": {
+					  "path": "zsh",
+					  "args": ["-l"]
+					}
+				},
+				"python.pythonPath": "/usr/local/bin/python",
+				"python.languageServer": "Pylance",
+				"python.linting.flake8": true,
+				"python.formatting.black": true
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-python.black-formatter",
+				"ms-python.vscode-pylance",
+				"ms-python.pylint",
+				"vscode.docker",
+				"boto3typed.boto3-ide",
+				"github.copilot",
+				"mechatroner.rainbow-csv",
+				"cstrap.flask-snippets",
+				"wholroyd.jinja",
+				"noxiz.jinja-snippets",
+				"ms-toolsai.jupyter"
+			]
+		}
+	}
+
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [9000],
+
+	// Use 'portsAttributes' to set default properties for specific forwarded ports. More info: https://code.visualstudio.com/docs/remote/devcontainerjson-reference.
+	// "portsAttributes": {
+	// 	"9000": {
+	// 		"label": "Hello Remote World",
+	// 		"onAutoForward": "notify"
+	// 	}
+	// },
+
+	// Use 'otherPortsAttributes' to configure any ports that aren't configured using 'portsAttributes'.
+	// "otherPortsAttributes": {
+	// 		"onAutoForward": "silent"
+	// },
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install -r requirements.txt",
+
+	// Comment out to connect as root instead
+	// "remoteUser": "vscode"
+}

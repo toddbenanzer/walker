@@ -1,0 +1,6 @@
+.pytest_cashe
+data
+*.png
+*.csv
+*.xlsx
+cache
